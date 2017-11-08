@@ -1,0 +1,118 @@
+body {
+	font-family: 'Lato';
+	margin: auto;
+	background-color: #0079BF;
+}
+
+header {
+	background-color: #0067A3;
+	text-align: center;
+}
+
+section {
+	width: 98%;
+	margin: auto;
+}
+
+.leftNav {
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+
+}
+
+.rightNav {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+}
+
+.logo {
+	opacity: 0.6;
+	margin: 5px;
+	display: inline-block;
+}
+
+.logo:hover {
+	opacity: 0.8;
+}
+
+.fa {
+	color: #fff;
+}
+
+.fa-search {
+	margin-left: -30px;
+}
+
+.commonBtn {
+	background-color: #66A4C7;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	padding: 8px 12px;
+	margin:5px;
+}
+
+.search {
+
+}
+
+.btnTableros i{
+	font-size: 18px;
+	margin-right: 10px;
+	padding-left: 0px;
+	line-height: 12px;
+}
+
+.btnTableros p{
+	display: inline-block;
+	font-weight: bold;
+	margin: 0px;
+	line-height: 12px;
+	font-size: 14px;
+}
+
+.btnUser {
+	border-radius: 35px;
+	background-color: #444;
+	border:none;
+	padding: 10px 12px;
+}
+
+.nameTab {
+	color: #fff;
+	font-size: 16px;
+	margin: 10px 15px 10px 0px;
+	display: inline-block;
+}
+
+.fa-star-o {
+	margin-right: 20px;
+}
+
+.user p{
+	font-size: 16px;
+	display: inline-block;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.addList {
+	background-color: #005485;
+	opacity: 0.5;
+	color: #fff;
+	font-size: 14px;
+	padding: 14px;
+	border-radius: 4px;
+	width: 270px;
+	text-align: left;
+	border:none;
+	cursor: pointer;
+	transition: opacity 0.5s;
+}
+
+.addList:hover {
+	opacity: 0.9;
+	transition: opacity 0.5s;
+}
