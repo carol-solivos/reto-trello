@@ -83,7 +83,7 @@ section {
 .nameTab {
 	color: #fff;
 	font-size: 16px;
-	margin: 10px 15px 10px 0px;
+	margin: 10px 15px 10px 10px;
 	display: inline-block;
 }
 
@@ -95,24 +95,73 @@ section {
 	font-size: 16px;
 	display: inline-block;
 	color: #fff;
-	margin-left: 10px;
+	margin: 12px 10px;
 }
 
-.addList {
-	background-color: #005485;
-	opacity: 0.5;
-	color: #fff;
-	font-size: 14px;
-	padding: 14px;
+#table .addList {
+	background: rgba(0, 84, 133, .4);
+	color: rgba(255, 255, 255, .7);
+	font-size: 15px;
+	padding: 12px;
 	border-radius: 4px;
-	width: 270px;
+	width: 250px;
 	text-align: left;
 	border:none;
 	cursor: pointer;
-	transition: opacity 0.5s;
+	transition: background 0.1s;
+	box-shadow: none;
 }
 
-.addList:hover {
-	opacity: 0.9;
+#table .addList:hover {
+	background: rgba(0, 84, 133, 1);
+}
+
+#putList .readyList, .formList {
+	background: #eee;
+	width: 265px;
+	display: inline-block;
+	box-shadow: 2px 4px 8px rgba(0,0,0,.3);
+	padding: 4px;
+	border-radius: 4px;
+	margin-right: 5px;
+}
+
+#putList {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#table input {
+	background-color: #ddd;
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 4px;
+	width: 245px;
+	text-align: left;
+	border:none;
 	transition: opacity 0.5s;
+	box-shadow: 0px 0px 8px rgba(0,0,0,0.3) inset;
+	outline: none;
+}
+
+#table button {
+	background-color: #5EB72E;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 8px;
+	border-radius: 4px;
+	width: 90px;
+	border:none;
+	margin-top: 5px;
+	transition: opacity 0.5s;
+	cursor: pointer;
+}
+
+#table icon {
+	color: #999;
+	margin-left: 8px;
+	font-size: 28px;
+	line-height: 30px;
+	cursor: pointer;
 }
