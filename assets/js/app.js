@@ -3,50 +3,46 @@ var btnAdd = document.getElementsByClassName('addList')[0];
 btnAdd.addEventListener('click', add);
 
 function add(){
-	var table = document.getElementById('table');
+	var btnIcon = document.getElementById('btnIcon');
 	document.getElementsByClassName('addList')[0].style.display = 'none';
-	var formList = document.createElement('div');
-	var input = document.createElement('input');
-	var btnSave = document.createElement('button');
-	var icon = document.createElement('icon');
-	input.setAttribute('placeholder','Añadir una lista...');
-	input.setAttribute('id','textList');
-	btnSave.setAttribute('id','btnSave');
-	btnSave.textContent = 'Guardar';
-	icon.setAttribute('class', 'fa fa-times');
-	formList.setAttribute('class','formList');
-
-	formList.appendChild(input);
-	formList.appendChild(btnSave);
-	formList.appendChild(icon);
-	table.appendChild(formList);
+	document.getElementById('formList').style.display = 'inline-block';
 
 	var boton = document.getElementById('btnSave');
 	boton.onclick = newList;
-
-	//función que habilita el boton, guarda el comentario y lo muestra en un div nuevo;
-	
+	btnIcon.onclick = redo;
 };
 
 function newList(){	
 		var textList = document.getElementById('textList').value;
 		document.getElementById('textList').value = '';
-
 		if(textList.length == 0 || textList == null){
 			return;
 		}
 
 		//obteniendo y creando nodos;
-		var putList = document.getElementById('putList')
+		var putList = document.getElementById('putList');
+		var containerList = document.createElement('div');
+		containerList.setAttribute('class','containerList');
 		var nameList = document.createElement('div');
-		var addNameList = document.createElement('p');
-		var placeTextList = document.createTextNode(textList);
 		nameList.setAttribute('class','readyList');
+		var addNameList = document.createElement('input');		
+		addNameList.setAttribute('value',textList);
+
+		//creando nodos del boton para agregar tarjeta
+		var btnList = document.createElement('button');
+		btnList.setAttribute('class','btnAddCardOne');
+		btnList.textContent = 'Añadir una tarjeta...'
+		
+		//btnList.setAttribute('class','btnSave');
 
 		// agregando nodos hijos a nodos padres;
-		addNameList.appendChild(placeTextList);
 		nameList.appendChild(addNameList);
-		putList.appendChild(nameList);
+		containerList.appendChild(nameList);
+		containerList.appendChild(btnList);
+		putList.appendChild(containerList);
+};
 
-		
-	};
+function redo(){
+	document.getElementById('formList').style.display = 'none';
+	document.getElementsByClassName('addList')[0].style.display = 'inline-block';
+};
